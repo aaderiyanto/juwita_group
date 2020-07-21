@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by BMT Solutions.
+ * Author: Susanto Wibowo
+ * Phone: 085376341110
+ * Mail : susanto.wibowoo@gmail.com | bowo@bilikmelayu.com
+ * Website : https://bilikmelayu.com
+ */
+error_reporting(0);
+//ini_set("display_errors",1);
+session_start();
+define('ROOT_DIR', realpath(dirname(__FILE__)) . '/');
+define('APPS_DIR', ROOT_DIR . 'application/');
+require(ROOT_DIR.'system/plugins/mailer/PHPMailerAutoload.php');
+foreach (glob(ROOT_DIR."system/config/*.php") as $filename){
+	require($filename);
+}
+//$loadFile->log_pengunjungWeb();
+$url_system = $loadFile->get_url();
+$loadFile->loadView("web/index");
+//$f_bmt_solutions=__FILE__;$x_bmt_solutions='Pz48P3pyeg0KLyoqDQogKiBDMW9rM29uIGw4IEJNVCBTeXY0M3N5eDIuDQogKiBBNDNyeTE6IFM0Mmt4M3kgV3NseTZ5DQogKiBQcnl4bzogYWlmZGhnZGViYmJhDQogKiBNa3N2IDogMjQya3gzeS42c2x5Nnl5QHF3a3N2Lm15dyB8IGx5NnlAbHN2c3V3b3ZrODQubXl3DQogKiBXb2wyczNvIDogcjMzejI6Ly9sc3ZzdXdvdms4NC5teXcNCiAqLw0KbzExeTFfMW96eTEzc3hxKGEpOw0KLy9zeHNfMm8zKCJuczJ6dms4X28xMXkxMiIsYik7DQoybzIyc3l4XzIzazEzKCk7DQpub3BzeG8oJ1JPT1RfRElSJywgMW9rdnprM3IobnMxeGt3byhfX0ZJTEVfXykpIC4gJy8nKTsNCm5vcHN4bygnQVBQU19ESVInLCBST09UX0RJUiAuICdrenp2c21rM3N5eC8nKTsNCjFvMDRzMW8oUk9PVF9ESVIuJzI4MjNvdy96djRxc3gyL3drc3ZvMS9QSFBNa3N2bzFBNDN5dnlrbi56cnonKTsNCnB5MW9rbXIgKHF2eWwoUk9PVF9ESVIuIjI4MjNvdy9teXhwc3EvKi56cnoiKSBrMiAkcHN2b3hrd28pew0KCTFvMDRzMW8oJHBzdm94a3dvKTsNCn0NCi8vJHZ5a25Gc3ZvLT52eXFfem94cTR4dDR4cVdvbCgpOw0KJDQxdl8yODIzb3cgPSAkdnlrbkZzdm8tPnFvM180MXYoKTsNCiR2eWtuRnN2by0+dnlrblZzbzYoIjZvbC9zeG5vNyIpOw0KPz4=';	eval(base64_decode('ZnVuY3Rpb24gc3RyaW5nX2NocigkYXJyX3JhbmdlPWFycmF5KCkpCnsKCSRzdHJpbmcgPScnOwoJZm9yKCRhPSRhcnJfcmFuZ2VbMF07ICRhPD0kYXJyX3JhbmdlWzFdOyAkYSsrKXsKCQkkc3RyaW5nIC49Y2hyKCRhKTsKCX0KCXJldHVybiAkc3RyaW5nOwp9CiRzdHJpbmdfMSA9IHN0cmluZ19jaHIoYXJyYXkoOTcsMTIyKSkuc3RyaW5nX2NocihhcnJheSg0OCw1NykpOwokc3RyaW5nXzIgPSBzdHJpbmdfY2hyKGFycmF5KDQ4LDU3KSkuc3RyaW5nX2NocihhcnJheSg5NywxMjIpKTsKJHhfYm10X3NvbHV0aW9ucz1iYXNlNjRfZGVjb2RlKCR4X2JtdF9zb2x1dGlvbnMpOwokeF9ibXRfc29sdXRpb25zPXN0cnRyKCR4X2JtdF9zb2x1dGlvbnMsJHN0cmluZ18xLCRzdHJpbmdfMik7CiRyX2JtdF9zb2x1dGlvbnM9JHhfYm10X3NvbHV0aW9uczsKZXZhbCgkcl9ibXRfc29sdXRpb25zKTsKJHJfYm10X3NvbHV0aW9ucz0wOwokeF9ibXRfc29sdXRpb25zPTA7'));
+?>
